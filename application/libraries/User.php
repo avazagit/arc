@@ -24,9 +24,7 @@ class User {
     {
         if( ! method_exists( $this, $sent[ 'view' ])) die( 'Not a valid POST URI' );
 
-        $this->data = call_user_func_array([ $this, $sent[ 'view' ]], [ $sent ] );
-
-        return $this;
+        return call_user_func_array([ $this, $sent[ 'view' ]], [ $sent ] );
     }
 
     /**

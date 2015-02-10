@@ -6,12 +6,10 @@ class User_model extends ARC_Model {
     function __construct()
     {
         parent::__construct();
-        $this->_ci =& get_instance();
-
         $this->table = 'users';
     }
 
-
+/*
     //TODO repair these functions AFTER making new user
     protected function roles()
     {
@@ -43,5 +41,5 @@ class User_model extends ARC_Model {
     protected function actions()
     {
         return $this->collection( 'access' )[ 'actions' ];
-    }
+    }*/
 }

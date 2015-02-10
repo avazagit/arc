@@ -24,43 +24,48 @@ function printMessages( $messages = null )
 
 /**
  * @param null  $message - Message string to display
- * @param bool  $valid - Boolean value for message type ( true = success, false= failure )
+ * @param string $class - Short version of css class
  * @param array $object - Object to attach message to
  * @param array $markup - Custom markup options
  *
  * @return array|object
- */ // TODO $valid should be the class name
-function message( $message = null, $valid = false, $object = [], $markup = [] )
+ */
+function message( $message = null, $class = 'fail', $object = [], $markup = [] )
 {
-
-    //TODO add additional option to send the message class
-    $type = $valid ? 'valid' : 'invalid';
+    $object = cast( $object );
 
     if( is_null( $message )) die( 'Please include a message when calling message()' );
 
-    if( is_array( $object )) $object = (object) $object;
-
-    $object->valid = $valid;
-
-    if( ! isset( $object->messages )) $object->messages = [];
-
-    if( ! is_array( $object->messages )) die( 'Messages structure error' );
-
-    $object->messages = addMessage( $object->messages, $message, $type, $markup );
+    $messages = isset( $object->messages ) ? $object->messages : [];
+    $object->messages = addMessage( $messages, $message, $class, $markup );
 
     return $object;
+}
+
+function css( $short )
+{
+    $classes = [
+        /*'valid' => 'alert-valid',
+        'invalid' => 'alert-invalid',*/
+        'warn' => 'alert-warning',
+        'info' => 'alert-info',
+        'good' => 'alert-success',
+        'fail' => 'alert-danger'
+    ];
+
+    return $classes[ $short ] OR false;
 }
 
 /**
  * @param        $messages
  * @param        $newMessage
- * @param string $type
+ * @param string $class
  * @param        $markup
  * @return array
  */
-function addMessage( $messages, $newMessage, $type = 'invalid', $markup )
+function addMessage( $messages, $newMessage, $class, $markup )
 {
-    $newMessage = wrapMessage( $newMessage, $type, $markup );
+    $newMessage = wrapMessage( $newMessage, $class, $markup );
 
     if( ! empty( $newMessage )) $messages[] = $newMessage;
 
@@ -69,13 +74,14 @@ function addMessage( $messages, $newMessage, $type = 'invalid', $markup )
 
 /**
  * @param $message
- * @param $type
+ * @param $class
  * @param $markup
  * @return array
  */
-function wrapMessage( $message, $type, $markup )
+function wrapMessage( $message, $class, $markup )
 {
-    $layout = [ 'tag' => 'div', 'class' => "alert alert-{$type}", 'closeable' => true, ];
+    $cssClass = "alert " . css( $class );
+    $layout = [ 'tag' => 'div', 'class' => $cssClass, 'closeable' => true, ];
     $design = array_merge( $layout, $markup );
 
     $markup = getMarkup( $design );
@@ -113,7 +119,7 @@ function validationMessages()
     $validation = [];
 
     foreach( $messages as $message ):
-        $validation = (array) message( $message, $errors );
+        $validation[] = cast( message( $message, $errors ), 'array');
     endforeach;
 
     return $validation['messages'];

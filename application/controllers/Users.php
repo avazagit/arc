@@ -1,6 +1,11 @@
 <?php
 if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
+/**
+ * Class Users
+ *
+ * @property User_model $user_model
+ */
 class Users extends ARC_Controller {
      
     function __construct()
@@ -15,28 +20,48 @@ class Users extends ARC_Controller {
         ];
     }
 
-    public function index( $post = false )
+    /**
+     *
+     */
+    public function index()
     {
-        $this->setView( 'users-index' );
-        $this->setData( $this->user_model->find());
+        $this->set( 'view', 'users-index' );
+        $this->set( 'data', $this->user_model->find());
 
-        $this->getView( 'gui', $post );
+        $this->show( 'gui' );
     }
 
-    public function create( $post = false )
+    /**
+     *
+     */
+    public function create()
     {
-        $this->setView( 'users-create' );
-        $this->setData( $this->user_model->find());
+        $this->set( 'view', 'users-create' );
+        $this->set( 'data', $this->user_model->find());
 
-        $this->getView( 'gui', $post );
+        $this->show( 'gui' );
     }
 
-    public function update( $post = false )
+    /**
+     * @param $id
+     */
+    public function details( $id )
     {
-        $this->setView( 'users-update' );
-        $this->setData( $this->user_model->find());
+        $this->set( 'view', 'users-read' );
+        $this->set( 'data', $this->user_model->find( $id ));
 
-        $this->getView( 'gui', $post );
+        $this->show( 'gui' );
+    }
+
+    /**
+     * @param $id
+     */
+    public function update( $id )
+    {
+        $this->set( 'view', 'users-update' );
+        $this->set( 'data', $this->user_model->find( $id ));
+
+        $this->show( 'gui' );
     }
 
     /**

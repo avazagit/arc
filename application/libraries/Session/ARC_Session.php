@@ -1,6 +1,8 @@
 <?php 
 if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
+//TODO http://eddmann.com/posts/storing-php-sessions-file-caches-in-memory-using-tmpfs/
+
 /**
  * Class ARC_Session
  *
@@ -12,7 +14,6 @@ class ARC_Session extends CI_Session {
     function __construct()
     {
         parent::__construct();
-        $this->_ci =& get_instance();
         $this->valid = false;
     }
 

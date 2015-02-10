@@ -38,7 +38,7 @@ class Auth extends ARC_Controller {
      */
     public function index()
     {
-        if( $this->session->valid ) redirect('home');
+        if( $this->session->valid ) redirect( 'home' );
 
         return $this->login();
     }
@@ -46,42 +46,36 @@ class Auth extends ARC_Controller {
     /**
      * URI - POST Location for system login
      *
-     * @param $post
-     *
      * @return mixed
      */
-    public function login( $post = true )
+    public function login()
     {
-        $this->setView( 'login' );
+        $this->set( 'view', 'login' );
 
-        return $this->getView( 'gui', $post );
+        return $this->show();
     }
 
     /**
      * URI - POST Location for password reset
      *
-     * @param $post
-     *
      * @return mixed
      */
-    public function reset( $post = true )
+    public function reset()
     {
-        $this->setView( 'reset' );
+        $this->set( 'view', 'reset' );
 
-        return $this->getView( 'gui', $post  );
+        return $this->show();
     }
 
     /**
      * URI - Location for logout redirect
      *
-     * @param $post
-     *
      * @return mixed
      */
-    public function logout( $post = true )
+    public function logout()
     {
-        $this->setView( 'login' );
+        $this->set( 'view', 'login' );
 
-        return $this->getView( 'gui', $post  );
+        return $this->show();
     }
 }

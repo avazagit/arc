@@ -24,7 +24,7 @@ class ARC_Model extends CI_Model {
      */
     public function collection( $name , $json = false )
     {
-        $collection = '/opt/alvin/core/collections/' . $name . '.json';
+        $collection = '/opt/arc/core/collections/' . $name . '.json';
 
         if( ! file_exists( $collection )) die( 'No collection by name : ' . $name );
 
@@ -42,7 +42,7 @@ class ARC_Model extends CI_Model {
     {
         if ( ! isset( $this->table )) die('NO CRUD - Requires defined ( $table )');
 
-        $this->structure = $this->collection( 'structures' )[$this->table];
+        $this->structure = $this->collection( 'structures' )[ $this->table ];
 
         return $this->table;
     }
@@ -123,6 +123,7 @@ class ARC_Model extends CI_Model {
     }
 
     /**
+     * @param $table
      * @param $search
      * @param $limit
      *
@@ -130,11 +131,13 @@ class ARC_Model extends CI_Model {
      */
     private function read( $table, $search, $limit )
     {
+        $locate = $this->strip( $search );
+
         foreach( $search as $column => $value ):
-            $this->db->where( $column, $value );
+            $this->_ci->db->where( $column, $value );
         endforeach;
 
-        $query = $this->db->get( $table, $limit );
+        $query = $this->_ci->db->get( $table, $limit );
 
         $result = $query->result();
         if( ! $result ) return false;
@@ -152,9 +155,9 @@ class ARC_Model extends CI_Model {
         $table = $this->ready();
         $insert = $this->adaptMessage( $record );
 
-        $this->db->insert($table, $insert);
+        $this->_ci->db->insert($table, $insert);
 
-        if( $this->db->affected_rows() <= 0 ) return false;
+        if( $this->_ci->db->affected_rows() <= 0 ) return false;
 
         return $this->errorsOrResult( $record );
     }
@@ -169,10 +172,10 @@ class ARC_Model extends CI_Model {
         $table = $this->ready();
         $update = $this->adaptMessage( $record );
 
-        $this->db->where( 'id', $update[ 'id' ]);
-        $this->db->update( $table, $update );
+        $this->_ci->db->where( 'id', $update[ 'id' ]);
+        $this->_ci->db->update( $table, $update );
 
-        if( $this->db->affected_rows() <= 0 ) return false;
+        if( $this->_ci->db->affected_rows() <= 0 ) return false;
 
         return $this->errorsOrResult( $record );
     }
@@ -186,10 +189,10 @@ class ARC_Model extends CI_Model {
     {
         $table = $this->ready();
 
-        $this->db->where( 'id', $delete[ 'id' ]);
-        $this->db->delete( $table, $delete );
+        $this->_ci->db->where( 'id', $delete[ 'id' ]);
+        $this->_ci->db->delete( $table, $delete );
 
-        if( $this->db->affected_rows() <= 0 ) return false;
+        if( $this->_ci->db->affected_rows() <= 0 ) return false;
 
         return $this->errorsOrResult( true );
     }
@@ -323,6 +326,16 @@ class ARC_Model extends CI_Model {
         $unpressed = json_decode( $pressed, true );
 
         return array_merge( $adapted, $unpressed );
+    }
+
+    private function strip( $search )
+    {
+        foreach( $search as $key => $value ):
+            if( ! isset( $value ) || empty( $value ) || '' == $value ) unset( $search[ 'key' ]);
+
+        endforeach;
+
+        return $search;
     }
 
 }

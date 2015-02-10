@@ -9,7 +9,7 @@
         },
         "press": {
             "auth_creds": [ "ext", "pin" ],
-            "auth_level": [ "roles", "permissions" ]
+            "auth_perms": [ "roles", "permissions" ]
         }
     }
 }
