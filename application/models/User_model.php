@@ -9,6 +9,20 @@ class User_model extends ARC_Model {
         $this->table = 'users';
     }
 
+    /**
+     * @param $sent
+     *
+     * @return mixed
+     */
+    public function post( $sent )
+    {
+        if( ! method_exists( $this, $sent[ 'view' ])) say( 'Not a valid POST URI' );
+
+        return call_user_func_array([ $this, $sent[ 'view' ]], [ $sent ] );
+    }
+
+
+
 /*
     //TODO repair these functions AFTER making new user
     protected function roles()

@@ -11,13 +11,9 @@ class Users extends ARC_Controller {
     function __construct()
     {
         parent::__construct();
-        $this->load->model( 'user_model' );
+        $this->resource( 'post', [ 'type' => 'model', 'name' => 'user' ]);
+        $this->set( 'view', 'login' )->set( 'data', null )->set( 'messages', [] );
 
-        $this->content = [
-            'view' => 'index',
-            'library' => 'user',
-            'messages' => []
-        ];
     }
 
     /**
