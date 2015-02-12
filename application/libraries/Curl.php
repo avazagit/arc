@@ -59,7 +59,7 @@ class Curl {
             return $this->executeCurl();
         }
 
-        die('You must include a URL');
+        say('You must include a URL');
     }
 
     /**

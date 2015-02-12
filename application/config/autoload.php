@@ -88,7 +88,7 @@ $autoload['drivers'] = [];
 |	$autoload['helper'] = array('url', 'file');
 */
 
-$autoload['helper'] = [ 'url', 'form', 'message', 'core' ];
+$autoload['helper'] = [ 'url', 'form', 'alert', 'cast', 'exception' ];
 
 
 /*
@@ -104,7 +104,7 @@ $autoload['helper'] = [ 'url', 'form', 'message', 'core' ];
 |
 */
 
-$autoload['config'] = [];
+$autoload['config'] = ['json'];
 
 
 /*

@@ -1,6 +1,4 @@
-<?php // Login/Authentication View  $messages
-    $messages = isset( $messages ) ? $messages : null;
-?>
+<?php // Login/Authentication View $alerts ?>
 
 
         <!-- ======================================== LOGIN ======================================= -->
@@ -10,7 +8,7 @@
                     <div class="logo-image"></div>
                 </div>
                 <div class="login-form">
-                    <?php printMessages( $messages ); ?>
+                    <?php if( ! empty( $alerts )) alerts( $alerts ); ?>
                     <?php echo form_open('auth/login') . "\n"; ?>
                         <?php echo form_input([ 'type' => 'email', 'name' =>'email', 'placeholder' => 'Email', 'required' => '' ]) . "\n"; ?>
                         <?php echo form_password('password', '', ' placeholder="Password" required=""') . "\n"; ?>

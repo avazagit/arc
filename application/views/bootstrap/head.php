@@ -14,7 +14,7 @@
     <title>
         <?php
             $headerTitle = isset($headerTitle) ? $headerTitle : 'ARC System';
-            echo $headerTitle;
+            echo $headerTitle . PHP_EOL;
         ?>
     </title>
     
@@ -30,7 +30,7 @@
     <?php
         if( isset($styleSheets) && !empty($styleSheets)):
             foreach( $styleSheets as $sheet ):
-                echo "<link rel=\"stylesheet\" href=\"/assets/stylesheets/{$sheet}\">\n";
+                echo '<link rel="stylesheet" href="/assets/stylesheets/' . $sheet . '">' . PHP_EOL;
             endforeach;
         endif;
     ?>

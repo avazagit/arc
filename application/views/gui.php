@@ -1,14 +1,22 @@
-<?php
-
-$template = isset( $guiTemplate ) ? $guiTemplate : 'none';
+<?php //GUI INTERFACE JSON LOADER BASE VIEW
 
 $templates = [
     'main' => '/gui',
     'none' => ''
 ];
 
-$content = isset( $pageContent ) ? $pageContent : 'missing';
+$defaults = [
+    'guiTemplate' => 'none',
+    'pageContent' => 'missing'
+];
 
-$this->load->view( 'bootstrap' . $templates[$template] . '/head' );
-$this->load->view( 'content/' . $content );
-$this->load->view( 'bootstrap' . $templates[$template] . '/foot' );
+if( ! isset( $details )) $details = $defaults;
+
+$contents = array_merge( $defaults, $details );
+
+$viewName = $contents[ 'pageContent' ];
+$template = $templates[ $contents[ 'guiTemplate' ]];
+
+$this->load->view( 'bootstrap' . $template . '/head', $contents );
+$this->load->view( 'content/' . $viewName, $contents );
+$this->load->view( 'bootstrap' . $template . '/foot', $contents );

@@ -22,7 +22,7 @@ class User {
      */
     public function post( $sent )
     {
-        if( ! method_exists( $this, $sent[ 'view' ])) die( 'Not a valid POST URI' );
+        if( ! method_exists( $this, $sent[ 'view' ])) say( 'Not a valid POST URI' );
 
         return call_user_func_array([ $this, $sent[ 'view' ]], [ $sent ] );
     }
@@ -36,11 +36,12 @@ class User {
     {
         $match = [ 'email' => null, 'password' => null ];
         $login = array_intersect_key( $posted, $match );
+
         $data = $this->check( $login );
 
-        if( ! $data ) return message( 'Invalid Username and/or Password.' );
+        if( ! $data ) return alert( 'Invalid Username and/or Password.', 'invalid' );
 
-        if( $this->isBlocked( $data )) return message( 'Account Blocked ( Too many failed attempts )' );
+        if( $this->isBlocked( $data )) return alert( 'Account Blocked ( Too many failed attempts )', 'invalid' );
 
         return $this->session();
     }
@@ -53,7 +54,7 @@ class User {
     protected function reset( $posted )
     {
         //TODO actually send reset email
-        return message( 'A reset link has been sent to ' . $posted[ 'email' ], true );
+        return alert( 'A reset link has been sent to ' . $posted[ 'email' ], 'good' );
     }
 
     /**
@@ -67,7 +68,7 @@ class User {
 
         if( ! $posted[ 'refresh' ]) $this->_ci->session->destroy();
 
-        return message( 'Successfully Logged Out', true);
+        return alert( 'Successfully Logged Out', 'good');
     }
 
     /**

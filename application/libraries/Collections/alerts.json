@@ -1,0 +1,10 @@
+{
+    "class": {
+        "valid": "alert alert-valid",
+        "invalid": "alert alert-invalid",
+        "warn": "alert alert-warning",
+        "info": "alert alert-info",
+        "good": "alert alert-success",
+        "fail": "alert alert-danger"
+    }
+}

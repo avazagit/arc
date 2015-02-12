@@ -33,23 +33,57 @@ class ARC_Controller extends CI_Controller {
      *
      * @return $this
      */
-    protected function set( $item, $value )
+    protected function set( $item, $value = null )
     {
+        if( is_null( $value )):
+            if( isset( $this->content[ $item ])) unset( $this->content[ $item ]);
+            if( ! is_null( $this->session->userdata( $item ))) $this->session->unset_userdata( $item );
+        endif;
+
         $this->content[ $item ] = $value;
+        $this->session->set_userdata( $this->content );
+
+        return $this;
+    }
+
+    protected function get( $item = null )
+    {
+        if( is_null( $item )):
+            if( is_null( $this->session->userdata()) && empty( $this->content )) return false;
+            if( is_null( $this->session->userdata())) return $this->content;
+            if( empty( $this->content )) return $this->session->userdata();
+        endif;
+
+        $ses = $this->session->userdata( $item );
+
+        $set = isset( $ses ) ? $ses : false;
+        $now = isset( $this->content[ $item ] ) ? $this->content[ $item ] : false;
+
+        return ! $set ? $now : $set;
+    }
+
+    protected function resource( $key, $value = null )
+    {
+        if( ! is_null( $value )) $this->sources[ $key ] = $value;
+        else unset( $this->sources[ $key ]);
 
         return $this;
     }
 
     /**
      * @param $interface
+     * @param $callback
+     * @param array $cbParams
      *
      * @return bool
      */
-    protected function post( $interface )
+    protected function post( $interface, $callback = 'index', $cbParams = [] )
     {
-        if( $this->validation()->fails() || $this->complete()->fails()) return $this->show( $interface, true );
+        if( $this->validation()->fails()) return $this->show( $interface, true );
+        if( $this->apply()->fails()) return $this->show( $interface, true );
 
-        return $this->index();//TODO User Class must set session validity to true
+        say( 'success' );
+        return call_user_func_array([ $this, $callback ], $cbParams ); //TODO User Class must set session validity to true
     }
 
     /**
@@ -58,7 +92,11 @@ class ARC_Controller extends CI_Controller {
     protected function validation()
     {
         $this->load->library( 'form_validation' );
-        if( ! $this->form_validation->run()) $this->set( 'messages', validationMessages());
+
+        if( ! $this->form_validation->run()):
+            $response = cast( validationAlerts());
+            $this->set( 'alerts', $response->alerts );
+        endif;
 
         return $this;
     }
@@ -66,13 +104,15 @@ class ARC_Controller extends CI_Controller {
     /**
      * @return $this
      */
-    protected function complete()
+    protected function apply()
     {
         $post = $this->sources[ 'post' ];
-        $this->loadSource( $post[ 'type' ], $post[ 'name' ] );
+        $this->load->resource( $post[ 'type' ], $post[ 'name' ] );
 
-        $response = cast( $this->resource->post( $this->posted()));
-        if( isset( $response->messages )) $this->set( 'messages', $response->messages );
+        $response = $this->resource->post( $this->posted());
+        $response = cast( $response );
+
+        if( isset( $response->alerts )) $this->set( 'alerts', $response->alerts );
 
         return $this;
     }
@@ -82,7 +122,7 @@ class ARC_Controller extends CI_Controller {
      */
     protected function fails()
     {
-        return isset( $this->content[ 'messages' ]) && ! empty( $this->content[ 'messages' ]);
+        return ( isset( $this->content[ 'alerts' ]) && ! empty( $this->content[ 'alerts' ]));
     }
 
     /**
@@ -94,19 +134,6 @@ class ARC_Controller extends CI_Controller {
         $this->set( 'post', $this->input->post( null, true ));
 
         return $this->show( 'gui' );
-    }
-
-    /**
-     * @param $type
-     * @param $name
-     *
-     * @return $this
-     */
-    protected function loadSource( $type, $name )
-    {
-        $this->load->$type( $name, [], 'resource' );
-
-        return $this;
     }
 
     /**

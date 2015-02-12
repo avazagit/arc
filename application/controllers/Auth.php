@@ -9,25 +9,12 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
  */
 class Auth extends ARC_Controller {
 
-    protected $content;
-
     function __construct()
     {
         parent::__construct();
 
-        $this->sources = [
-            'post' => [
-                'type' => 'library',
-                'name' => 'user'
-            ]
-        ];
-
-        $this->content = [
-            'view' => 'index',
-            'data' => null,
-            'messages' => []
-        ];
-
+        $this->resource( 'post', [ 'type' => 'library', 'name' => 'user' ]);
+        $this->set( 'view', 'login' )->set( 'data', null )->set( 'messages', [] );
     }
 
     /**

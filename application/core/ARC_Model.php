@@ -17,32 +17,11 @@ class ARC_Model extends CI_Model {
     }
 
     /**
-     * @param $name
-     * @param bool $json
-     *
-     * @return mixed|string
-     */
-    public function collection( $name , $json = false )
-    {
-        $collection = '/opt/arc/core/collections/' . $name . '.json';
-
-        if( ! file_exists( $collection )) die( 'No collection by name : ' . $name );
-
-        $data = file_get_contents( $collection );
-
-        if( $json ) return $data;
-
-        return json_decode( $data, true );
-    }
-
-    /**
      * @return string
      */
     protected function ready()
     {
-        if ( ! isset( $this->table )) die('NO CRUD - Requires defined ( $table )');
-
-        $this->structure = $this->collection( 'structures' )[ $this->table ];
+        $this->structure = $this->_ci->load->json( 'structures', 'collection' )[ $this->table ];
 
         return $this->table;
     }
@@ -131,7 +110,7 @@ class ARC_Model extends CI_Model {
      */
     private function read( $table, $search, $limit )
     {
-        $locate = $this->strip( $search );
+        $search = $this->strip( $search );
 
         foreach( $search as $column => $value ):
             $this->_ci->db->where( $column, $value );
@@ -255,8 +234,6 @@ class ARC_Model extends CI_Model {
 
         if( $read ) $names = array_flip( $this->structure[ 'input' ]);
 
-
-
         foreach( $names as $to => $from ):
             if( isset( $message[ $from ])) $adapted[ $to ] = $message[ $from ];
         endforeach;
@@ -331,8 +308,7 @@ class ARC_Model extends CI_Model {
     private function strip( $search )
     {
         foreach( $search as $key => $value ):
-            if( ! isset( $value ) || empty( $value ) || '' == $value ) unset( $search[ 'key' ]);
-
+            if( ! cast( $value ) || empty( $value ) || strlen( $value ) == 0 ) unset( $search[ 'key' ]);
         endforeach;
 
         return $search;

@@ -10,7 +10,7 @@
     <?php
         if( isset( $javaScripts ) && ! empty( $javaScripts )):
             foreach( $javaScripts as $script ):
-                echo "<script src=\"/assets/javascripts/{$script}\"></script>\n";
+                echo '<script src="/assets/javascripts/' . $script . '"></script>' . PHP_EOL;
             endforeach;
         endif;
     ?>
