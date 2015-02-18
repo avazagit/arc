@@ -9,6 +9,11 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
  */
 class Auth extends ARC_Controller {
 
+    /**
+     * Instance constructor
+     *
+     * Set default resource and variables
+     */
     function __construct()
     {
         parent::__construct();
