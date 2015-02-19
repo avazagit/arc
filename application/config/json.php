@@ -12,4 +12,5 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |--------------------------------------------------------------------------
 */
 $config[ 'viewLoaderPath' ] = '/opt/arc/libraries/Collections/views/';
+$config[ 'formLoaderPath' ] = '/opt/arc/libraries/Collections/forms/';
 $config[ 'collectionPath' ] = '/opt/arc/libraries/Collections/';

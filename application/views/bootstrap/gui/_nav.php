@@ -324,4 +324,5 @@
                 <!-- /section:basics/navbar.dropdown -->
             </div><!-- /.navbar-container -->
         </div>
-<?php $this->load->view('bootstrap/gui/body'); ?>
+
+<?php $this->load->view('bootstrap/gui/body', compact( 'navigation', 'pageContent' )); ?>

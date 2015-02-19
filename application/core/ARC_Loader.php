@@ -84,6 +84,7 @@ class ARC_Loader extends CI_Loader {
         $details = $toolbox[ $parts[ 'view' ]];
 
         $details[ 'alerts' ] = isset( $parts[ 'alerts' ] ) ? $parts[ 'alerts' ] : [];
+        $details[ 'navigation' ] = isset( $parts[ 'navigation' ] ) ? $parts[ 'navigation' ] : [];
 
         return [ '_ci_vars' => $this->_ci_object_to_array( $details )];
     }
@@ -109,7 +110,7 @@ class ARC_Loader extends CI_Loader {
      */
     public function jsonFile( $name, $pathKey, $decode = false )
     {
-        $paths = [ 'view' => 'viewLoaderPath', 'collection' => 'collectionPath' ];
+        $paths = [ 'view' => 'viewLoaderPath', 'collection' => 'collectionPath', 'form' => 'formLoaderPath' ];
 
         if( ! in_array( $pathKey, array_keys( $paths ))) say( $pathKey . ' is not a valid json file location key.' );
 

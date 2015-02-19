@@ -36,7 +36,7 @@ class ARC_Model extends CI_Model {
     {
         if( ! is_array( $record )) $record = ['id' => $record ];
 
-        $limit = $max <= 0 ? null : [ 'limit' => $max ];
+        $limit = $max <= 0 ? [] : [ 'limit' => $max ];
         $find = array_merge( $record, $limit );
 
         return $this->pull( $find );

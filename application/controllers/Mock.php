@@ -9,7 +9,7 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
  * @author Josh Murray
  */
 
-class Mock extends CI_Controller{
+class Mock extends ARC_Controller{
 
     protected $details;
 
@@ -18,15 +18,16 @@ class Mock extends CI_Controller{
         parent::__construct();
     }
 
-    function index(){
-        $this->load->view('gui', 'mock');
+    function index()
+    {
+        $this->gui();
     }
 
     function gui()
     {
-        $this->details['template'] = 'main';
-        $this->details['view'] = 'mock';
+        $this->set( 'template', 'main');
+        $this->set( 'view', 'mock' );
 
-        $this->load->view( 'gui', $this->details );
+        $this->show();
     }
 }

@@ -143,6 +143,16 @@ class User {
         return $this->_ci->session->userdata( 'user');
     }
 
+    public function navigation()
+    {//TODO SET USER PERMISSIONS
+        $user = new stdClass();
+        $user->roles = [ 'Super Admin' ];
+
+        $navigation = $this->_ci->load->json( 'navigation' );
+
+        return $navigation;
+    }
+
     /**
      * @param $role
      */

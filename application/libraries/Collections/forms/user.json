@@ -1,0 +1,91 @@
+{
+    "form": {
+        "email": {
+            "adapter":{ "rename":"auth_email" },
+            "markup": {
+                "type":"text",
+                "label":"Email"
+            }
+        },
+        "password":{
+            "adapter":{ "rename":"auth_passw" },
+            "markup": {
+                "type":"password",
+                "label":"Password"
+            }
+        },
+        "type":{
+            "adapter":{ "compact":"auth_creds" },
+            "markup": {
+                "type":"select",
+                "label":"User Type",
+                "collection":{
+                    "Personnel User":{
+                        "ext":{
+                            "markup": {
+                                "type":"text",
+                                "label": "Phone Extension"
+                            }
+                        },
+                        "pin":{
+                            "markup": {
+                                "type":"text",
+                                "label": "Phone Pin"
+                            }
+                        },
+                        "ext_type":{
+                            "markup": {
+                                "type": "select",
+                                "label": "Extension Type",
+                                "collection":{
+                                    "gs":"General Staff ( No Interpreting )",
+                                    "ih":"In-House Interpreter",
+                                    "si":"Satellite Interpreter ( ",
+                                    "sd":"Satellite Interpreter ( Direct )"
+                                }
+                            }
+                        }
+                    }
+                    },
+                    "Client User":{
+                        "markup": {
+                            "type":"select",
+                            "label":"Client User Type",
+                            "collection":{
+                                "access_code":{
+                                    "markup": {
+                                        "type":"search",
+                                        "label": "Standard User",
+                                        "search": "divisions"
+                                    }
+                                },
+                                "client_id":{
+                                    "markup": {
+                                        "type":"search",
+                                        "label": "Agency Manager",
+                                        "search": "agencies"
+                                    }
+                                },
+                                "account_number":{
+                                    "markup": {
+                                        "type":"search",
+                                        "label": "Account Manager",
+                                        "search": "accounts"
+                                    }
+                                }
+                            }
+                        }
+                    }
+            },
+
+        },
+        "permissions":{
+            "roles":{
+
+            },
+            "invite_token":{
+
+            }
+        }
+    }
+}

@@ -157,6 +157,17 @@ class ARC_Controller extends CI_Controller {
     {
         if( ! $failed && ! empty( $_POST )) return $this->post( $interface );
 
+        $this->getUserInterface();
+
         return $this->load->view( $interface, $this->content );
+    }
+
+    protected function getUserInterface()
+    {
+        $this->load->resource( 'library', 'user' );
+
+        $this->set( 'navigation', $this->resource->navigation());
+
+        return $this;
     }
 }

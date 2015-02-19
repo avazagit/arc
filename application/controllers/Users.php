@@ -11,13 +11,17 @@ class Users extends ARC_Controller {
     function __construct()
     {
         parent::__construct();
+
+        $this->load->model('user_model');
+
         $this->resource( 'post', [ 'type' => 'model', 'name' => 'user' ]);
-        $this->set( 'view', 'login' )->set( 'data', null )->set( 'messages', [] );
+
+        $this->set( 'view', 'index' )->set( 'data', null )->set( 'messages', [] );
 
     }
 
     /**
-     *
+     * Primary View List of Users
      */
     public function index()
     {
@@ -28,34 +32,33 @@ class Users extends ARC_Controller {
     }
 
     /**
-     *
+     * Create User Form
      */
     public function create()
     {
-        $this->set( 'view', 'users-create' );
-        $this->set( 'data', $this->user_model->find());
+        $this->set( 'view', 'users-create' )->set( 'data', $this->user_model->find());
 
         $this->show( 'gui' );
     }
 
     /**
+     * View Details of a User by user_id
      * @param $id
      */
     public function details( $id )
     {
-        $this->set( 'view', 'users-read' );
-        $this->set( 'data', $this->user_model->find( $id ));
+        $this->set( 'view', 'users-read' )->set( 'data', $this->user_model->find( $id ));
 
         $this->show( 'gui' );
     }
 
     /**
+     * Edit Details of a User by user_id
      * @param $id
      */
     public function update( $id )
     {
-        $this->set( 'view', 'users-update' );
-        $this->set( 'data', $this->user_model->find( $id ));
+        $this->set( 'view', 'users-update' )->set( 'data', $this->user_model->find( $id ));
 
         $this->show( 'gui' );
     }
@@ -64,7 +67,7 @@ class Users extends ARC_Controller {
      * Retrieve session credentials and display as JSON string
      *
      * @return void
-     */
+     *
     public function creds()
     {
         $this->details = $this->session->user;
@@ -189,6 +192,6 @@ class Users extends ARC_Controller {
     protected function checkResetToken()
     {
 
-    }
+    }*/
 
 }

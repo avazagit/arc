@@ -1,0 +1,81 @@
+{
+    "sidebar": {
+        "options": {
+            "default": {
+                "class": "sidebar responsive"
+            },
+            "compact": {
+                "class": "sidebar responsive compact",
+                "alter": {
+                    "old": "no-hover",
+                    "new": "hover"
+                }
+            },
+            "minimum": {
+                "class": "sidebar responsive menu-min",
+                "alter": {
+                    "old": "no-hover",
+                    "new": "hover"
+                }
+            }
+        },
+        "items": {
+            "dashboard": {
+                "link": "/home",
+                "menu_text": "Dashboard",
+                "menu_icon": "menu-icon fa fa-tachometer",
+                "class": "no-hover",
+                "roles": ["Super Admin"],
+                "order": 1
+            },
+            "users": {
+                "link": "/users",
+                "menu_text": "Users",
+                "menu_icon": "menu-icon fa fa-users",
+                "class": "no-hover",
+                "roles": ["Super Admin"],
+                "order": 2,
+                "sub": {
+                    "users-index": {
+                        "link": "/users",
+                        "menu_text": "View Users",
+                        "menu_icon": "menu-icon fa fa-caret-right",
+                        "class": "no-hover",
+                        "roles": ["Super Admin"],
+                        "order": 1
+                    },
+                    "users-create": {
+                        "link": "/users/create",
+                        "menu_text": "New User",
+                        "menu_icon": "menu-icon fa fa-caret-right",
+                        "class": "no-hover",
+                        "roles": ["Super Admin"],
+                        "order": 2
+                    }
+                }
+            }
+        },
+        "shortcuts":{
+            "calls": {
+                "link": "/calls",
+                "class": "btn btn-success",
+                "menu_icon": "ace-icon fa fa-phone"
+            },
+            "schedule": {
+                "link": "/schedule",
+                "class": "btn btn-warning",
+                "menu_icon": "ace-icon fa fa-calendar"
+            },
+            "chat": {
+                "link": "/chat",
+                "class": "btn btn-info",
+                "menu_icon": "ace-icon fa fa-comments"
+            },
+            "stats": {
+                "link": "#",
+                "class": "btn btn-danger",
+                "menu_icon": "ace-icon fa fa-signal"
+            }
+        }
+    }
+}

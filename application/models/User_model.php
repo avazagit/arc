@@ -21,6 +21,22 @@ class User_model extends ARC_Model {
         return call_user_func_array([ $this, $sent[ 'view' ]], [ $sent ] );
     }
 
+    public function create()
+    {
+        $this->set( 'view', 'users-create' )->set( 'data', $this->user_model->find());
+
+        $this->show( 'gui' );
+    }
+
+    public function update()
+    {
+
+    }
+
+
+
+
+
 
 
 /*
