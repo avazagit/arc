@@ -1,53 +1,88 @@
 {
+    "types": [
+        {
+            "name": "Guest",
+            "desc": "Visitors that are not registered/authenticated",
+            "code": "gs"
+        },
+        {
+            "name": "Staff - General",
+            "desc": "W2 Employee - staff members not used for interpreting",
+            "code": "sg"
+        },
+        {
+            "name": "Staff - Interpreter",
+            "desc": "W2 Employee - staff members used for interpreting",
+            "code": "si"
+        },
+        {
+            "name": "Satellite Interpreter - Queue",
+            "desc": "Contract Interpreter - contacted through an AVAZA assigned extension AND cleared to collect client information",
+            "code": "cq"
+        },
+        {
+            "name": "Satellite Interpreter - Direct",
+            "desc": "Contract Interpreter - contacted through an AVAZA assigned extension",
+            "code": "cd"
+        },
+        {
+            "name": "Satellite Interpreter - Remote",
+            "desc": "Contract Interpreter - contacted through their personal phone",
+            "code": "cr"
+        },
+        {
+            "name": "Client Administrator",
+            "desc": "Client user with the ability to create/edit/delete \"Client Users\" and control their access levels ( Created by AVAZA staff )",
+            "code": "aa"
+        },
+        {
+            "name": "Client User",
+            "desc": "Client User - ( Created by Client Administrator )",
+            "code": "au"
+        },
+        {
+            "name": "Super Admin",
+            "desc": "Technical Staff - all role and permission checks are bypassed ( Can access client AND staff pages )",
+            "code": "sa"
+        }
+    ],
+    "resources": [
+        { "name": "Guest", "table": false },
+        { "name": "Call Records", "table": "calls" },
+        { "name": "On-Sites", "table": "sites" },
+        { "name": "Translation Documents", "table": "translations" },
+        { "name": "Video Sessions", "table": "videos" },
+        { "name": "Schedules", "table": "schedules" },
+        { "name": "Languages", "table": "languages" },
+        { "name": "Client Divisions", "table": "divisions" },
+        { "name": "Client Agencies", "table": "agencies" },
+        { "name": "Client Accounts", "table": "accounts" },
+        { "name": "Rates", "table": "rates" },
+        { "name": "ARC Users", "table": "users" },
+        { "name": "Profiles", "table": "profiles" },
+        { "name": "Reports", "table": "reports" },
+        { "name": "Invoices", "table": "invoices" }
+    ],
     "actions": {
-        "view": "1",
-        "edit": "2",
-        "wipe": "3"
-    },
-    "staff": {
-        "resources": {
-            "1": "Call Records",
-            "2": "On Sites",
-            "3": "Translation Documents",
-            "4": "Video Sessions",
-            "5": "Schedules",
-            "6": "Languages",
-            "7": "Clients",
-            "8": "Rates",
-            "9": "Users",
-            "10": "Contacts",
-            "11": "Reports",
-            "12": "Invoices"
-        }
-    },
-    "interpreter": {
-        "resources": {
-            "1": "User Records",
-            "3": "User Sites",
-            "4": "User Documents",
-            "5": "User Sessions",
-            "6": "User Schedules",
-            "9": "User Rates",
-            "10": "User User",
-            "11": "User Contact",
-            "12": "User Reports",
-            "13": "User Invoices"
-        }
-    },
-    "client": {
-        "resources": {
-            "1": "Client Call Records",
-            "2": "Client On Sites",
-            "3": "Client Translation Documents",
-            "4": "Client Video Sessions",
-            "5": "Client Schedules",
-            "6": "Client Agencies",
-            "7": "Client Divisions",
-            "8": "Client Rates",
-            "9": "Client Users",
-            "10": "Client Contacts",
-            "11": "Client Reports",
-            "12": "Client Invoices"
+        "look": {
+            "name": "Guest",
+            "desc": "Access to guest site only ( not authenticated )",
+            "opts": [ "none" ]
+        },
+        "view": {
+            "name": "View",
+            "desc": "Access to data-resource for viewing ( View Only )",
+            "opts": [ "none", "user", "full" ]
+        },
+        "edit": {
+            "name": "Change",
+            "desc": "Access to data-resource for editing ( Includes Viewing )",
+            "opts": [ "none", "user", "full" ]
+        },
+        "wipe": {
+            "name": "Delete",
+            "desc": "Access to data-resource for deletion ( Includes Editing )",
+            "opts": [ "none", "user", "fake", "full" ]
         }
     }
 }
