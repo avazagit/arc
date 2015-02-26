@@ -1,0 +1,264 @@
+{
+    "actions": {
+        "none": {
+            "index": 0,
+            "label": "None",
+            "desc": "No access to records"
+        },
+        "lead":{
+            "index": 1,
+            "label": "Guided",
+            "desc": "Guided access to records only ( Clients )"
+        },
+        "view": {
+            "index": 2,
+            "label": "View",
+            "desc": "View existing records"
+        },
+        "make": {
+            "index": 3,
+            "label": "Create",
+            "desc": "Create new records ( Includes View )"
+        },
+        "edit": {
+            "index": 4,
+            "label": "Change",
+            "desc": "Edit existing records ( Includes Create )"
+        },
+        "wipe": {
+            "index": 5,
+            "label": "Delete",
+            "desc": "Delete existing records ( Includes Change )"
+        },
+        "full": {
+            "index": 6,
+            "label": "Destroy",
+            "desc": "Complete access, provides ability to completely destroy records ( Includes All )"
+        }
+    },
+    "scopes": {
+        "1": "user",
+        "2": "staff",
+        "3": "client"
+    },
+    "models":{
+        "calls": "call_model",
+        "sites": "site_model",
+        "translations": "translation_model",
+        "videos": "video_model",
+        "schedules": "schedule_model",
+        "divisions": "division_model",
+        "agencies": "agency_model",
+        "accounts": "account_model",
+        "rates": "rate_model",
+        "users": "user_model",
+        "profiles": "profile_model",
+        "reports": "reports_model",
+        "invoices": "invoice_model"
+    },
+    "tables": {
+        "calls": [
+            {
+                "index": 1,
+                "label": "My Call Records",
+                "scope": "1"
+            },
+            {
+                "index": 2,
+                "label": "All Call Records"
+            }
+        ],
+        "sites": [
+            {
+                "index": 3,
+                "label": "My On-Sites",
+                "scope": "1"
+            },
+            {
+                "index": 4,
+                "label": "All On-Sites"
+            }
+        ],
+        "translations": [
+            {
+                "index": 5,
+                "label": "My Translations",
+                "scope": "1"
+            },
+            {
+                "index": 6,
+                "label": "All Translations"
+            }
+        ],
+        "videos": [
+            {
+                "index": 7,
+                "label": "My Video Sessions",
+                "scope": "1"
+            },
+            {
+                "index": 8,
+                "label": "All Video Sessions"
+            }
+        ],
+        "schedules": [
+            {
+                "index": 9,
+                "label": "My Schedule",
+                "scope": "1"
+            },
+            {
+                "index": 10,
+                "label": "Staff Schedules",
+                "scope": "2"
+            },
+            {
+                "index": 11,
+                "label": "Client Schedules",
+                "scope": "3"
+            },
+            {
+                "index": 12,
+                "label": "All Schedules"
+            }
+        ],
+        "divisions": [
+            {
+                "index": 13,
+                "label": "User Division",
+                "scope": "1"
+            },
+            {
+                "index": 14,
+                "label": "All Divisions"
+            }
+        ],
+        "agencies": [
+            {
+                "index": 15,
+                "label": "User Agency",
+                "scope": "1"
+            },
+            {
+                "index": 16,
+                "label": "All Agencies"
+            }
+        ],
+        "accounts": [
+            {
+                "index": 17,
+                "label": "User Account",
+                "scope": "1"
+            },
+            {
+                "index": 18,
+                "label": "All Accounts"
+            }
+        ],
+        "rates": [
+            {
+                "index": 19,
+                "label": "My Rates",
+                "scope": "1"
+            },
+            {
+                "index": 20,
+                "label": "Staff Rates",
+                "scope": "2"
+            },
+            {
+                "index": 21,
+                "label": "Client Rates",
+                "scope": "3"
+            },
+            {
+                "index": 22,
+                "label": "All Rates"
+            }
+        ],
+        "users": [
+            {
+                "index": 23,
+                "label": "My User",
+                "scope": "1"
+            },
+            {
+                "index": 24,
+                "label": "Staff Users",
+                "scope": "2"
+            },
+            {
+                "index": 25,
+                "label": "Client Users",
+                "scope": "3"
+            },
+            {
+                "index": 26,
+                "label": "All Users"
+            }
+        ],
+        "profiles": [
+            {
+                "index": 27,
+                "label": "My Profile",
+                "scope": "1"
+            },
+            {
+                "index": 28,
+                "label": "Staff Profiles",
+                "scope": "2"
+            },
+            {
+                "index": 29,
+                "label": "Client Profiles",
+                "scope": "3"
+            },
+            {
+                "index": 30,
+                "label": "All Profiles"
+            }
+        ],
+        "reports": [
+            {
+                "index": 31,
+                "label": "My Reports",
+                "scope": "1"
+            },
+            {
+                "index": 32,
+                "label": "Staff Reports",
+                "scope": "2"
+            },
+            {
+                "index": 33,
+                "label": "Client Reports",
+                "scope": "3"
+            },
+            {
+                "index": 34,
+                "label": "All Reports",
+            }
+        ],
+        "invoices": [
+            {
+                "index": 35,
+                "label": "My Invoices",
+                "scope": "1"
+            },
+            {
+                "index": 36,
+                "label": "Staff Invoices",
+                "scope": "2"
+            },
+            {
+                "index": 37,
+                "label": "Client Invoices",
+                "scope": "3"
+            },
+            {
+                "index": 38,
+                "label": "All Invoices"
+            }
+        ]
+    }
+}

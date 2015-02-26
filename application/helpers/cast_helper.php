@@ -113,3 +113,10 @@ function object_cast( $array, $recursive = false )
 
     return $object;
 }
+
+function token_cast( $string = null )
+{
+    if( is_null( $string )) return get_instance()->morph->hash( strtotime( 'now' ));
+
+    return get_instance()->morph->hash( $string );
+}

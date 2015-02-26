@@ -1,90 +1,62 @@
 {
     "form": {
-        "email": {
-            "adapter":{ "rename":"auth_email" },
-            "markup": {
-                "type":"text",
-                "label":"Email"
-            }
-        },
-        "password":{
-            "adapter":{ "rename":"auth_passw" },
-            "markup": {
-                "type":"password",
-                "label":"Password"
-            }
-        },
-        "type":{
-            "adapter":{ "compact":"auth_creds" },
-            "markup": {
-                "type":"select",
-                "label":"User Type",
-                "collection":{
-                    "Personnel User":{
-                        "ext":{
-                            "markup": {
-                                "type":"text",
-                                "label": "Phone Extension"
-                            }
-                        },
-                        "pin":{
-                            "markup": {
-                                "type":"text",
-                                "label": "Phone Pin"
-                            }
-                        },
-                        "ext_type":{
-                            "markup": {
-                                "type": "select",
-                                "label": "Extension Type",
-                                "collection":{
-                                    "gs":"General Staff ( No Interpreting )",
-                                    "ih":"In-House Interpreter",
-                                    "si":"Satellite Interpreter ( ",
-                                    "sd":"Satellite Interpreter ( Direct )"
-                                }
-                            }
-                        }
-                    }
+        "modes": [
+            "make",
+            "edit"
+        ],
+        "fields": {
+            "email": {
+                "markup": {
+                    "type": "text",
+                    "label": "Email"
+                }
+            },
+            "password": {
+                "markup": {
+                    "type": "password",
+                    "label": "Password"
+                }
+            },
+            "user_type": {
+                "markup": {
+                    "type": "jsonSelection",
+                    "label": "User Type",
+                    "collection": {
+                        "type": "childSelect",
+                        "name": "roles",
+                        "index": "types",
+                        "default": "default_permissions"
                     },
-                    "Client User":{
-                        "markup": {
-                            "type":"select",
-                            "label":"Client User Type",
-                            "collection":{
-                                "access_code":{
-                                    "markup": {
-                                        "type":"search",
-                                        "label": "Standard User",
-                                        "search": "divisions"
-                                    }
-                                },
-                                "client_id":{
-                                    "markup": {
-                                        "type":"search",
-                                        "label": "Agency Manager",
-                                        "search": "agencies"
-                                    }
-                                },
-                                "account_number":{
-                                    "markup": {
-                                        "type":"search",
-                                        "label": "Account Manager",
-                                        "search": "accounts"
-                                    }
-                                }
+                    "selected": [
+                        {
+                            "type": "jsonGroup",
+                            "locate": "values",
+                            "label": "User Credentials",
+                            "collection": {
+                                "type": "input",
+                                "name": "roles",
+                                "fields": "credentials"
+                            }
+                        },
+                        {
+                            "type": "jsonGroup",
+                            "label": "Resource Permissions",
+                            "collection": {
+                                "type": "radio",
+                                "name": "resources",
+                                "fields": "tables",
+                                "choices": "actions",
+                                "hide": true
                             }
                         }
-                    }
+                    ]
+                }
             },
-
-        },
-        "permissions":{
-            "roles":{
-
-            },
-            "invite_token":{
-
+            "invite_token": {
+                "markup": {
+                    "type": "token",
+                    "label": "invite_token"
+                }
             }
         }
     }

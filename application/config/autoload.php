@@ -88,7 +88,7 @@ $autoload['drivers'] = [];
 |	$autoload['helper'] = array('url', 'file');
 */
 
-$autoload['helper'] = [ 'url', 'form', 'alert', 'cast', 'dynamic', 'exception' ];
+$autoload['helper'] = [ 'url', 'form', 'alert', 'cast', 'dynamic_view', 'dynamic_form' ];
 
 
 /*

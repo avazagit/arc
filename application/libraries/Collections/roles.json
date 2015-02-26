@@ -1,0 +1,127 @@
+{
+    "credentials": {
+        "values": {
+            "guest": [ "gs" ],
+            "staff": [ "sg", "si", "sq", "sd", "sr", "sa" ],
+            "client": [ "aa", "au", "sa" ]
+        },
+        "staff": {
+            "ext": {
+                "markup": {
+                    "type": "text",
+                    "label": "Phone Extension"
+                }
+            },
+            "pin": {
+                "markup": {
+                    "type": "text",
+                    "label": "Phone PIN"
+                }
+            }
+        },
+        "client": {
+            "manages": {
+                "markup": {
+                    "type": "childSelect",
+                    "label": "Manages",
+                    "collection": {
+                        "no": "Standard User",
+                        "ac": "Division",
+                        "cc": "Agency",
+                        "at": "Account"
+                    },
+                    "selected":[
+                        {
+                            "ac": {
+                                "markup": {
+                                    "type": "search",
+                                    "label": "Access Code",
+                                    "search": {"divisions": "access_code"}
+                                }
+                            },
+                            "cc":{
+                                "markup": {
+                                    "type": "search",
+                                    "label": "Client ID",
+                                    "search": {"agencies": "client_id"}
+                                }
+                            },
+                            "at":{
+                                "markup": {
+                                    "type": "search",
+                                    "label": "Account Number",
+                                    "search": {"accounts": "account_number"}
+                                }
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "types": [
+        {
+            "index": 0,
+            "name": "Guest",
+            "desc": "Visitors that are not registered/authenticated",
+            "value": "gs",
+            "default_permissions": [ 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 ]
+        },
+        {
+            "index": 1,
+            "name": "Staff - General",
+            "desc": "W2 Employee - staff members not used for interpreting",
+            "value": "sg",
+            "default_permissions": [ 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 ]
+        },
+        {
+            "index": 2,
+            "name": "Staff - Interpreter",
+            "desc": "W2 Employee - staff members used for interpreting",
+            "value": "si",
+            "default_permissions": [ 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 ]
+        },
+        {
+            "index": 3,
+            "name": "Satellite Interpreter - Queue",
+            "desc": "Contract Interpreter - contacted through an AVAZA assigned extension AND cleared to collect client information",
+            "value": "sq",
+            "default_permissions": [ 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 ]
+        },
+        {
+            "index": 4,
+            "name": "Satellite Interpreter - Direct",
+            "desc": "Contract Interpreter - contacted through an AVAZA assigned extension",
+            "value": "sd",
+            "default_permissions": [ 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 ]
+        },
+        {
+            "index": 5,
+            "name": "Satellite Interpreter - Remote",
+            "desc": "Contract Interpreter - contacted through their personal phone",
+            "value": "sr",
+            "default_permissions": [ 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 ]
+        },
+        {
+            "index": 6,
+            "name": "Client Administrator",
+            "desc": "Client user with the ability to create/edit/delete \"Client Users\" and control their access levels ( Created by AVAZA staff )",
+            "value": "aa",
+            "default_permissions": [ 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 ]
+        },
+        {
+            "index": 7,
+            "name": "Client User",
+            "desc": "Client User - ( Created by Client Administrator )",
+            "value": "au",
+            "default_permissions": [ 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 ]
+        },
+        {
+            "index": 8,
+            "name": "Super Admin",
+            "desc": "Technical Staff - all role/permission checks are bypassed ( Can access client AND staff pages )",
+            "value": "sa",
+            "default_permissions": [ 6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6 ]
+        }
+    ]
+}
