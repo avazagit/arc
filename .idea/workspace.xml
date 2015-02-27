@@ -2,17 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a15601a6-89de-4740-aaa5-4580483181a0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/TODO.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/helpers/bsForm_helper.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/libraries/Collections/resources.json" />
-      <change type="DELETED" beforePath="C:\Users\j.murray\code\apps\arc\application\libraries\Collections\access.json" afterPath="" />
-      <change type="MOVED" beforePath="C:\Users\j.murray\code\apps\arc\application\helpers\dynaForm_helper.php" afterPath="$PROJECT_DIR$/application/helpers/dynamic_form_helper.php" />
-      <change type="MOVED" beforePath="C:\Users\j.murray\code\apps\arc\application\helpers\dynamic_helper.php" afterPath="$PROJECT_DIR$/application/helpers/dynamic_view_helper.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/autoload.php" afterPath="$PROJECT_DIR$/application/config/autoload.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/helpers/cast_helper.php" afterPath="$PROJECT_DIR$/application/helpers/cast_helper.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/libraries/Collections/forms/radios/actions.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/libraries/Collections/forms/groups/permissions.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/libraries/Collections/forms/selects/roles.json" />
+      <change type="DELETED" beforePath="C:\Users\j.murray\code\apps\arc\application\helpers\dynaForm_helper.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\j.murray\code\apps\arc\application\libraries\Collections\roles.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\j.murray\code\apps\arc\application\libraries\Collections\structures.json" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/helpers/dynamic_form_helper.php" afterPath="$PROJECT_DIR$/application/helpers/dynamic_form_helper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/Collections/resources.json" afterPath="$PROJECT_DIR$/application/libraries/Collections/resources.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/libraries/Collections/forms/user.json" afterPath="$PROJECT_DIR$/application/libraries/Collections/forms/user.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="arc.iws" />
@@ -38,11 +36,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="user.json" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/libraries/Collections/forms/user.json">
+      <file leaf-file-name="permissions.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/libraries/Collections/forms/groups/permissions.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.1521739" vertical-offset="0" max-vertical-offset="1904">
-              <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
+            <state vertical-scroll-proportion="0.6698565" vertical-offset="0" max-vertical-offset="3976">
+              <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -56,15 +54,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/application/helpers/message_helper.php" />
-        <option value="$PROJECT_DIR$/application/helpers/core_helper.php" />
-        <option value="$PROJECT_DIR$/application/config/file_paths.php" />
-        <option value="$PROJECT_DIR$/application/core/collections/classes.json" />
-        <option value="$PROJECT_DIR$/application/libraries/Exceptions.php" />
-        <option value="$PROJECT_DIR$/application/libraries/Exceptions/ARC_Exception.php" />
-        <option value="$PROJECT_DIR$/application/libraries/Exceptions/FormValidationException.php" />
-        <option value="$PROJECT_DIR$/application/libraries/Curl.php" />
-        <option value="$PROJECT_DIR$/application/views/content/auth/reset.php" />
         <option value="$PROJECT_DIR$/application/views/bootstrap/foot.php" />
         <option value="$PROJECT_DIR$/application/views/bootstrap/head.php" />
         <option value="$PROJECT_DIR$/application/libraries/Collections/views/guiLoader.json" />
@@ -101,12 +90,21 @@
         <option value="$PROJECT_DIR$/application/config/autoload.php" />
         <option value="$PROJECT_DIR$/application/helpers/cast_helper.php" />
         <option value="$PROJECT_DIR$/application/helpers/bootstrap_form_helper.php" />
-        <option value="$PROJECT_DIR$/application/helpers/dynamic_form_helper.php" />
         <option value="$PROJECT_DIR$/application/libraries/Collections/forms/user_permissions.json" />
         <option value="$PROJECT_DIR$/application/libraries/Collections/forms/user_types.json" />
+        <option value="$PROJECT_DIR$/application/libraries/Collections/user.yaml" />
+        <option value="$PROJECT_DIR$/application/helpers/dynamic_form_helper.php" />
+        <option value="$PROJECT_DIR$/application/libraries/Collections/structures.json" />
         <option value="$PROJECT_DIR$/application/libraries/Collections/resources.json" />
+        <option value="$PROJECT_DIR$/application/libraries/Collections/credentials.json" />
         <option value="$PROJECT_DIR$/application/libraries/Collections/roles.json" />
+        <option value="$PROJECT_DIR$/application/libraries/Collections/actions.json" />
+        <option value="$PROJECT_DIR$/application/libraries/Collections/permissions.json" />
+        <option value="$PROJECT_DIR$/application/libraries/Collections/forms/selects/roles.json" />
+        <option value="$PROJECT_DIR$/application/libraries/Collections/forms/groups/credentials.json" />
+        <option value="$PROJECT_DIR$/application/libraries/Collections/forms/radios/actions.json" />
         <option value="$PROJECT_DIR$/application/libraries/Collections/forms/user.json" />
+        <option value="$PROJECT_DIR$/application/libraries/Collections/forms/groups/permissions.json" />
       </list>
     </option>
   </component>
@@ -115,10 +113,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="Remote PHP 5.6" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="92" />
-    <option name="y" value="65" />
-    <option name="width" value="1900" />
-    <option name="height" value="1003" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="2064" />
+    <option name="height" value="1128" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -255,6 +253,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="arc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="arc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="libraries" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -321,6 +337,66 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Collections" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="forms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="radios" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="arc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="arc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Collections" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="forms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="groups" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="arc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="arc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="helpers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -361,11 +437,11 @@
       <recent name="C:\Users\j.murray\code\apps\arc\application\config" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\j.murray\code\apps\arc\application\libraries\Collections\forms\radios" />
+      <recent name="C:\Users\j.murray\code\apps\arc\application\libraries\Collections\forms\selects" />
+      <recent name="C:\Users\j.murray\code\apps\arc\application\libraries\Collections\forms\fieldGroups" />
       <recent name="C:\Users\j.murray\code\apps\arc\application\libraries\Collections" />
       <recent name="C:\Users\j.murray\code\apps\arc\application\libraries\Collections\forms" />
-      <recent name="C:\Users\j.murray\code\apps\arc\application\libraries\Collections\forms\User" />
-      <recent name="C:\Users\j.murray\code\apps\arc\application\libraries\Collections\User" />
-      <recent name="C:\Users\j.murray\code\apps\arc\application\libraries\Collections\views" />
     </key>
   </component>
   <component name="RunManager">
@@ -411,7 +487,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="92" y="65" width="1900" height="1003" extended-state="0" />
+    <frame x="-8" y="-8" width="2064" height="1128" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -421,7 +497,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12261146" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.11279297" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -457,27 +533,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/standard_9.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22854477" vertical-offset="6839" max-vertical-offset="29932">
-          <caret line="253" column="53" selection-start-line="253" selection-start-column="53" selection-end-line="253" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/Core_c.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35852534" vertical-offset="4427" max-vertical-offset="9744">
-          <caret line="172" column="23" selection-start-line="172" selection-start-column="23" selection-end-line="172" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/libraries/Exceptions/FormValidationException.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18064517" vertical-offset="0" max-vertical-offset="1085">
-          <caret line="7" column="26" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/libraries/Exceptions/ARC_Exception.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.30967742" vertical-offset="0" max-vertical-offset="1085">
@@ -957,35 +1012,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/helpers/dynamic_form_helper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42870814" vertical-offset="0" max-vertical-offset="3668">
-          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
-          <folding>
-            <marker date="1424973201373" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1424973201373" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424973201373" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1424973201373" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1424973201373" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1424973201373" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424973201373" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424973201373" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424973201373" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424973201373" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424973201373" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424973201373" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424973201373" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424973201373" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1424973201373" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1424973201373" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1424973201373" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1424973201373" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1424973201373" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1424973201373" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/libraries/Collections/alerts.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.24347825" vertical-offset="0" max-vertical-offset="920">
@@ -993,19 +1019,6 @@
           <folding>
             <marker date="1423700322283" expanded="true" signature="-1:-1" placeholder="{...}" />
             <marker date="1423700322283" expanded="true" signature="-1:-1" placeholder="{&quot;valid&quot;: &quot;alert alert-valid&quot;...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/libraries/Collections/structures.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3043478" vertical-offset="0" max-vertical-offset="920">
-          <caret line="10" column="43" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
-          <folding>
-            <marker date="1423595221934" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1423595221934" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1423595221934" expanded="true" signature="-1:-1" placeholder="{&quot;id&quot;: &quot;user_id&quot;...}" />
-            <marker date="1423595221934" expanded="true" signature="-1:-1" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -1042,121 +1055,140 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/libraries/Collections/resources.json">
+    <entry file="file://$PROJECT_DIR$/application/libraries/Collections/forms/selects/roles.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6391304" vertical-offset="504" max-vertical-offset="7532">
-          <caret line="39" column="20" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.4555024" vertical-offset="0" max-vertical-offset="1456">
+          <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
           <folding>
-            <marker date="1424983090947" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1424983090947" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1424983090947" expanded="true" signature="-1:-1" placeholder="{&quot;index&quot;: 0...}" />
-            <marker date="1424983090947" expanded="true" signature="-1:-1" placeholder="{&quot;index&quot;: 1...}" />
-            <marker date="1424983090947" expanded="true" signature="-1:-1" placeholder="{&quot;index&quot;: 2...}" />
-            <marker date="1424983090947" expanded="true" signature="-1:-1" placeholder="{&quot;index&quot;: 3...}" />
-            <marker date="1424983090947" expanded="true" signature="-1:-1" placeholder="{&quot;index&quot;: 4...}" />
-            <marker date="1424983090947" expanded="true" signature="-1:-1" placeholder="{&quot;index&quot;: 5...}" />
-            <marker date="1424983090947" expanded="true" signature="-1:-1" placeholder="{&quot;index&quot;: 6...}" />
-            <marker date="1424983090947" expanded="true" signature="-1:-1" placeholder="{&quot;1&quot;: &quot;user&quot;...}" />
-            <marker date="1424983090947" expanded="true" signature="-1:-1" placeholder="{&quot;calls&quot;: &quot;call_model&quot;...}" />
-            <marker date="1424983090947" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1424983090947" expanded="true" signature="-1:-1" placeholder="[...]" />
-            <marker date="1424983090947" expanded="true" signature="-1:-1" placeholder="{&quot;index&quot;: 1...}" />
-            <marker date="1424983090947" expanded="true" signature="-1:-1" placeholder="{&quot;index&quot;: 2...}" />
-            <marker date="1424983090947" expanded="true" signature="-1:-1" placeholder="[...]" />
-            <marker date="1424983090947" expanded="true" signature="-1:-1" placeholder="{&quot;index&quot;: 3...}" />
-            <marker date="1424983090947" expanded="true" signature="-1:-1" placeholder="{&quot;index&quot;: 4...}" />
-            <marker date="1424983090947" expanded="true" signature="-1:-1" placeholder="[...]" />
-            <marker date="1424983090947" expanded="true" signature="-1:-1" placeholder="{&quot;index&quot;: 5...}" />
-            <marker date="1424983090947" expanded="true" signature="-1:-1" placeholder="{&quot;index&quot;: 6...}" />
-            <marker date="1424983090947" expanded="true" signature="-1:-1" placeholder="[...]" />
-            <marker date="1424983090947" expanded="true" signature="-1:-1" placeholder="{&quot;index&quot;: 7...}" />
-            <marker date="1424983090947" expanded="true" signature="-1:-1" placeholder="{&quot;index&quot;: 8...}" />
-            <marker date="1424983090947" expanded="true" signature="-1:-1" placeholder="[...]" />
-            <marker date="1424983090947" expanded="true" signature="-1:-1" placeholder="{&quot;index&quot;: 9...}" />
-            <marker date="1424983090947" expanded="true" signature="-1:-1" placeholder="{&quot;index&quot;: 10...}" />
-            <marker date="1424983090947" expanded="true" signature="-1:-1" placeholder="{&quot;index&quot;: 11...}" />
-            <marker date="1424983090947" expanded="true" signature="-1:-1" placeholder="{&quot;index&quot;: 12...}" />
-            <marker date="1424983090947" expanded="true" signature="-1:-1" placeholder="[...]" />
-            <marker date="1424983090947" expanded="true" signature="-1:-1" placeholder="{&quot;index&quot;: 13...}" />
-            <marker date="1424983090947" expanded="true" signature="-1:-1" placeholder="{&quot;index&quot;: 14...}" />
-            <marker date="1424983090947" expanded="true" signature="-1:-1" placeholder="[...]" />
-            <marker date="1424983090947" expanded="true" signature="-1:-1" placeholder="{&quot;index&quot;: 15...}" />
-            <marker date="1424983090947" expanded="true" signature="-1:-1" placeholder="{&quot;index&quot;: 16...}" />
-            <marker date="1424983090947" expanded="true" signature="-1:-1" placeholder="[...]" />
-            <marker date="1424983090947" expanded="true" signature="-1:-1" placeholder="{&quot;index&quot;: 17...}" />
-            <marker date="1424983090947" expanded="true" signature="-1:-1" placeholder="{&quot;index&quot;: 18...}" />
-            <marker date="1424983090947" expanded="true" signature="-1:-1" placeholder="[...]" />
-            <marker date="1424983090947" expanded="true" signature="-1:-1" placeholder="{&quot;index&quot;: 19...}" />
-            <marker date="1424983090947" expanded="true" signature="-1:-1" placeholder="{&quot;index&quot;: 20...}" />
-            <marker date="1424983090947" expanded="true" signature="-1:-1" placeholder="{&quot;index&quot;: 21...}" />
-            <marker date="1424983090947" expanded="true" signature="-1:-1" placeholder="{&quot;index&quot;: 22...}" />
-            <marker date="1424983090947" expanded="true" signature="-1:-1" placeholder="[...]" />
-            <marker date="1424983090947" expanded="true" signature="-1:-1" placeholder="{&quot;index&quot;: 23...}" />
-            <marker date="1424983090947" expanded="true" signature="-1:-1" placeholder="{&quot;index&quot;: 24...}" />
-            <marker date="1424983090947" expanded="true" signature="-1:-1" placeholder="{&quot;index&quot;: 25...}" />
-            <marker date="1424983090947" expanded="true" signature="-1:-1" placeholder="{&quot;index&quot;: 26...}" />
-            <marker date="1424983090947" expanded="true" signature="-1:-1" placeholder="[...]" />
-            <marker date="1424983090947" expanded="true" signature="-1:-1" placeholder="{&quot;index&quot;: 27...}" />
-            <marker date="1424983090947" expanded="true" signature="-1:-1" placeholder="{&quot;index&quot;: 28...}" />
-            <marker date="1424983090947" expanded="true" signature="-1:-1" placeholder="{&quot;index&quot;: 29...}" />
-            <marker date="1424983090947" expanded="true" signature="-1:-1" placeholder="{&quot;index&quot;: 30...}" />
-            <marker date="1424983090947" expanded="true" signature="-1:-1" placeholder="[...]" />
-            <marker date="1424983090947" expanded="true" signature="-1:-1" placeholder="{&quot;index&quot;: 31...}" />
-            <marker date="1424983090947" expanded="true" signature="-1:-1" placeholder="{&quot;index&quot;: 32...}" />
-            <marker date="1424983090947" expanded="true" signature="-1:-1" placeholder="{&quot;index&quot;: 33...}" />
-            <marker date="1424983090947" expanded="true" signature="-1:-1" placeholder="{&quot;index&quot;: 34...}" />
-            <marker date="1424983090947" expanded="true" signature="-1:-1" placeholder="[...]" />
-            <marker date="1424983090947" expanded="true" signature="-1:-1" placeholder="{&quot;index&quot;: 35...}" />
-            <marker date="1424983090947" expanded="true" signature="-1:-1" placeholder="{&quot;index&quot;: 36...}" />
-            <marker date="1424983090947" expanded="true" signature="-1:-1" placeholder="{&quot;index&quot;: 37...}" />
-            <marker date="1424983090947" expanded="true" signature="-1:-1" placeholder="{&quot;index&quot;: 38...}" />
+            <marker date="1425058820476" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425058820476" expanded="true" signature="-1:-1" placeholder="{&quot;value&quot;: 0...}" />
+            <marker date="1425058820476" expanded="true" signature="-1:-1" placeholder="{&quot;value&quot;: 1...}" />
+            <marker date="1425058820476" expanded="true" signature="-1:-1" placeholder="{&quot;value&quot;: 2...}" />
+            <marker date="1425058820476" expanded="true" signature="-1:-1" placeholder="{&quot;value&quot;: 3...}" />
+            <marker date="1425058820476" expanded="true" signature="-1:-1" placeholder="{&quot;value&quot;: 4...}" />
+            <marker date="1425058820476" expanded="true" signature="-1:-1" placeholder="{&quot;value&quot;: 5...}" />
+            <marker date="1425058820476" expanded="true" signature="-1:-1" placeholder="{&quot;value&quot;: 6...}" />
+            <marker date="1425058820476" expanded="true" signature="-1:-1" placeholder="{&quot;value&quot;: 7...}" />
+            <marker date="1425058820476" expanded="true" signature="-1:-1" placeholder="{&quot;value&quot;: 8...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/libraries/Collections/roles.json">
+    <entry file="file://$PROJECT_DIR$/application/helpers/dynamic_form_helper.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5173913" vertical-offset="0" max-vertical-offset="3696">
-          <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
+        <state vertical-scroll-proportion="0.18755981" vertical-offset="504" max-vertical-offset="3668">
+          <caret line="25" column="32" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
           <folding>
-            <marker date="1424983090939" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1424983090939" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1424983090939" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1424983090939" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1424983090939" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1424983090939" expanded="true" signature="-1:-1" placeholder="{&quot;type&quot;: &quot;text&quot;...}" />
-            <marker date="1424983090939" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1424983090939" expanded="true" signature="-1:-1" placeholder="{&quot;type&quot;: &quot;text&quot;...}" />
-            <marker date="1424983090939" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1424983090939" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1424983090939" expanded="true" signature="-1:-1" placeholder="{&quot;type&quot;: &quot;childSelect&quot;...}" />
-            <marker date="1424983090939" expanded="true" signature="-1:-1" placeholder="{&quot;no&quot;: &quot;Standard User&quot;...}" />
-            <marker date="1424983090939" expanded="true" signature="-1:-1" placeholder="[...]" />
-            <marker date="1424983090939" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1424983090939" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1424983090939" expanded="true" signature="-1:-1" placeholder="{&quot;type&quot;: &quot;search&quot;...}" />
-            <marker date="1424983090939" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1424983090939" expanded="true" signature="-1:-1" placeholder="{&quot;type&quot;: &quot;search&quot;...}" />
-            <marker date="1424983090939" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1424983090939" expanded="true" signature="-1:-1" placeholder="{&quot;type&quot;: &quot;search&quot;...}" />
-            <marker date="1424983090939" expanded="true" signature="-1:-1" placeholder="[...]" />
-            <marker date="1424983090939" expanded="true" signature="-1:-1" placeholder="{&quot;name&quot;: &quot;Guest&quot;...}" />
-            <marker date="1424983090939" expanded="true" signature="-1:-1" placeholder="{&quot;name&quot;: &quot;Staff - General&quot;...}" />
-            <marker date="1424983090939" expanded="true" signature="-1:-1" placeholder="{&quot;name&quot;: &quot;Staff - Interpreter&quot;...}" />
-            <marker date="1424983090939" expanded="true" signature="-1:-1" placeholder="{&quot;name&quot;: &quot;Satellite Interpreter - Queue&quot;...}" />
-            <marker date="1424983090939" expanded="true" signature="-1:-1" placeholder="{&quot;name&quot;: &quot;Satellite Interpreter - Direct&quot;...}" />
-            <marker date="1424983090939" expanded="true" signature="-1:-1" placeholder="{&quot;name&quot;: &quot;Satellite Interpreter - Remote&quot;...}" />
-            <marker date="1424983090939" expanded="true" signature="-1:-1" placeholder="{&quot;name&quot;: &quot;Client Administrator&quot;...}" />
-            <marker date="1424983090939" expanded="true" signature="-1:-1" placeholder="{&quot;name&quot;: &quot;Client User&quot;...}" />
-            <marker date="1424983090939" expanded="true" signature="-1:-1" placeholder="{&quot;name&quot;: &quot;Super Admin&quot;...}" />
+            <marker date="1425056051709" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425056051709" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425056051709" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425056051709" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425056051709" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425056051709" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425056051709" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425056051709" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425056051709" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425056051709" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425056051709" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425056051709" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425056051709" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425056051709" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1425056051709" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425056051709" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425056051709" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425056051709" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425056051709" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425056051709" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/libraries/Collections/forms/radios/actions.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21435407" vertical-offset="0" max-vertical-offset="1820">
+          <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+          <folding>
+            <marker date="1425060738755" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425060738755" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425060738755" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425060738755" expanded="true" signature="-1:-1" placeholder="{&quot;index&quot;: 1...}" />
+            <marker date="1425060738755" expanded="true" signature="-1:-1" placeholder="{&quot;index&quot;: 2...}" />
+            <marker date="1425060738755" expanded="true" signature="-1:-1" placeholder="{&quot;index&quot;: 3...}" />
+            <marker date="1425060738755" expanded="true" signature="-1:-1" placeholder="{&quot;index&quot;: 4...}" />
+            <marker date="1425060738755" expanded="true" signature="-1:-1" placeholder="{&quot;value&quot;: 0...}" />
+            <marker date="1425060738755" expanded="true" signature="-1:-1" placeholder="{&quot;value&quot;: 1...}" />
+            <marker date="1425060738755" expanded="true" signature="-1:-1" placeholder="{&quot;value&quot;: 2...}" />
+            <marker date="1425060738755" expanded="true" signature="-1:-1" placeholder="{&quot;value&quot;: 3...}" />
+            <marker date="1425060738755" expanded="true" signature="-1:-1" placeholder="{&quot;value&quot;: 4...}" />
+            <marker date="1425060738755" expanded="true" signature="-1:-1" placeholder="{&quot;value&quot;: 5...}" />
+            <marker date="1425060738755" expanded="true" signature="-1:-1" placeholder="{&quot;value&quot;: 6...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/libraries/Collections/resources.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.053588517" vertical-offset="0" max-vertical-offset="1624">
+          <caret line="2" column="8" selection-start-line="1" selection-start-column="4" selection-end-line="49" selection-end-column="14" />
+          <folding>
+            <marker date="1425057756361" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425057756361" expanded="true" signature="-1:-1" placeholder="{&quot;model&quot;: &quot;call_model&quot;...}" />
+            <marker date="1425057756361" expanded="true" signature="-1:-1" placeholder="{&quot;model&quot;: &quot;site_model&quot;...}" />
+            <marker date="1425057756361" expanded="true" signature="-1:-1" placeholder="{&quot;model&quot;: &quot;translation_model&quot;...}" />
+            <marker date="1425057756361" expanded="true" signature="-1:-1" placeholder="{&quot;model&quot;: &quot;video_model&quot;...}" />
+            <marker date="1425057756361" expanded="true" signature="-1:-1" placeholder="{&quot;model&quot;: &quot;schedule_model&quot;...}" />
+            <marker date="1425057756361" expanded="true" signature="-1:-1" placeholder="{&quot;model&quot;: &quot;division_model&quot;...}" />
+            <marker date="1425057756361" expanded="true" signature="-1:-1" placeholder="{&quot;model&quot;: &quot;agency_model&quot;...}" />
+            <marker date="1425057756361" expanded="true" signature="-1:-1" placeholder="{&quot;model&quot;: &quot;account_model&quot;...}" />
+            <marker date="1425057756361" expanded="true" signature="-1:-1" placeholder="{&quot;model&quot;: &quot;rate_model&quot;...}" />
+            <marker date="1425057756361" expanded="true" signature="-1:-1" placeholder="{&quot;model&quot;: &quot;user_model&quot;...}" />
+            <marker date="1425057756361" expanded="true" signature="-1:-1" placeholder="{&quot;id&quot;: &quot;user_id&quot;...}" />
+            <marker date="1425057756361" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425057756361" expanded="true" signature="-1:-1" placeholder="{&quot;model&quot;: &quot;profile_model&quot;...}" />
+            <marker date="1425057756361" expanded="true" signature="-1:-1" placeholder="{&quot;model&quot;: &quot;reports_model&quot;...}" />
+            <marker date="1425057756361" expanded="true" signature="-1:-1" placeholder="{&quot;model&quot;: &quot;invoice_model&quot;...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/libraries/Collections/forms/user.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1521739" vertical-offset="0" max-vertical-offset="1904">
-          <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
+        <state vertical-scroll-proportion="0.45167464" vertical-offset="1852" max-vertical-offset="2968">
+          <caret line="83" column="48" selection-start-line="83" selection-start-column="48" selection-end-line="83" selection-end-column="48" />
+          <folding>
+            <marker date="1425074290697" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425074290697" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425074290697" expanded="true" signature="-1:-1" placeholder="[...]" />
+            <marker date="1425074290697" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425074290697" expanded="true" signature="-1:-1" placeholder="{&quot;type&quot;: &quot;text&quot;...}" />
+            <marker date="1425074290697" expanded="true" signature="-1:-1" placeholder="{&quot;type&quot;: &quot;password&quot;...}" />
+            <marker date="1425074290697" expanded="true" signature="-1:-1" placeholder="{&quot;type&quot;: &quot;groupSelector&quot;...}" />
+            <marker date="1425074290697" expanded="true" signature="-1:-1" placeholder="{&quot;name&quot;: &quot;roles&quot;...}" />
+            <marker date="1425074290697" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425074290697" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425074290697" expanded="true" signature="-1:-1" placeholder="{&quot;type&quot;: &quot;text&quot;...}" />
+            <marker date="1425074290697" expanded="true" signature="-1:-1" placeholder="{&quot;type&quot;: &quot;text&quot;...}" />
+            <marker date="1425074290697" expanded="true" signature="-1:-1" placeholder="{&quot;type&quot;: &quot;jsonGroup&quot;...}" />
+            <marker date="1425074290697" expanded="true" signature="-1:-1" placeholder="{&quot;name&quot;: &quot;permissions&quot;...}" />
+            <marker date="1425074290697" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425074290697" expanded="true" signature="-1:-1" placeholder="{&quot;type&quot;: &quot;groupSelector&quot;...}" />
+            <marker date="1425074290697" expanded="true" signature="-1:-1" placeholder="{&quot;type&quot;: &quot;list&quot;...}" />
+            <marker date="1425074290697" expanded="true" signature="-1:-1" placeholder="{&quot;no&quot;: &quot;Standard User&quot;...}" />
+            <marker date="1425074290697" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1425074290697" expanded="true" signature="-1:-1" placeholder="{&quot;type&quot;: &quot;search&quot;...}" />
+            <marker date="1425074290697" expanded="true" signature="-1:-1" placeholder="{&quot;type&quot;: &quot;search&quot;...}" />
+            <marker date="1425074290697" expanded="true" signature="-1:-1" placeholder="{&quot;type&quot;: &quot;search&quot;...}" />
+            <marker date="1425074290697" expanded="true" signature="-1:-1" placeholder="{&quot;type&quot;: &quot;jsonGroup&quot;...}" />
+            <marker date="1425074290697" expanded="true" signature="-1:-1" placeholder="{&quot;name&quot;: &quot;permissions&quot;...}" />
+            <marker date="1425074290697" expanded="true" signature="-1:-1" placeholder="{&quot;type&quot;: &quot;token&quot;...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/libraries/Collections/forms/groups/permissions.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6698565" vertical-offset="0" max-vertical-offset="3976">
+          <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
           <folding />
         </state>
       </provider>

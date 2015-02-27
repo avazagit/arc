@@ -1,0 +1,47 @@
+{
+    "gs": {
+        "value": 0,
+        "label": "Select User Type ..",
+        "desc": "Please select a user type"
+    },
+    "sg": {
+        "value": 1,
+        "label": "Staff - General",
+        "desc": "W2 Employee - staff member not used for interpreting"
+    },
+    "si": {
+        "value": 2,
+        "label": "Staff - Interpreter",
+        "desc": "W2 Employee - staff member used for interpreting"
+    },
+    "sq": {
+        "value": 3,
+        "label": "Satellite Interpreter - Queue",
+        "desc": "Contract Interpreter - contacted through an AVAZA assigned extension AND cleared to collect client information"
+    },
+    "sd": {
+        "value": 4,
+        "label": "Satellite Interpreter - Direct",
+        "desc": "Contract Interpreter - contacted through an AVAZA assigned extension"
+    },
+    "sr": {
+        "value": 5,
+        "label": "Satellite Interpreter - Remote",
+        "desc": "Contract Interpreter - contacted through a personal phone number"
+    },
+    "aa": {
+        "value": 6,
+        "label": "Client Administrator",
+        "desc": "Client user with the ability to create/edit/delete \"Client Users\" and control their access levels ( Created by AVAZA staff ONLY )"
+    },
+    "au": {
+        "value": 7,
+        "label": "Client User",
+        "desc": "Client User - ( Created by AVAZA staff OR \"Client Administrator\" )"
+    },
+    "sa": {
+        "value": 8,
+        "label": "Super Admin",
+        "desc": "Technical Staff - all role/permission checks are bypassed ( Can access ALL pages with complete control )"
+    }
+}

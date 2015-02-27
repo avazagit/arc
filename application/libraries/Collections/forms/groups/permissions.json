@@ -1,0 +1,137 @@
+{
+    "scopes": {
+        "client": [ "user", "client" ],
+        "staff": [ "user", "staff", "all" ]
+    },
+    "calls": {
+        "index": 1,
+        "type": "scopeRadios",
+        "label": "Telephone Sessions",
+        "collection": {
+            "type": "jsonRadios",
+            "scope": [ "user", "all" ],
+            "name": "actions"
+        }
+    },
+    "sites": {
+        "index": 2,
+        "type": "scopeRadios",
+        "label": "In Person Sessions",
+        "collection": {
+            "type": "jsonRadios",
+            "scope": [ "user", "all" ],
+            "name": "actions"
+        }
+    },
+    "translations": {
+        "index": 3,
+        "type": "scopeRadios",
+        "label": "Document Translations",
+        "collection": {
+            "type": "jsonRadios",
+            "scope": [ "user", "all" ],
+            "name": "actions"
+        }
+    },
+    "videos": {
+        "index": 4,
+        "type": "scopeRadios",
+        "label": "Video Remote Sessions",
+        "collection": {
+            "type": "jsonRadios",
+            "scope": [ "user", "all" ],
+            "name": "actions"
+        }
+    },
+    "schedules": {
+        "index": 5,
+        "type": "scopeRadios",
+        "label": "Schedules",
+        "collection": {
+            "type": "jsonRadios",
+            "scope": [ "user", "staff", "client", "all" ],
+            "name": "actions"
+        }
+    },
+    "divisions": {
+        "index": 6,
+        "type": "scopeRadios",
+        "label": "Divisions",
+        "collection": {
+            "type": "jsonRadios",
+            "scope": [ "user", "all" ],
+            "name": "actions"
+        }
+    },
+    "agencies": {
+        "index": 7,
+        "type": "scopeRadios",
+        "label": "Agencies",
+        "collection": {
+            "type": "jsonRadios",
+            "scope": [ "user", "all" ],
+            "name": "actions"
+        }
+    },
+    "accounts": {
+        "index": 8,
+        "type": "scopeRadios",
+        "label": "Accounts",
+        "collection": {
+            "type": "jsonRadios",
+            "scope": [ "user", "all" ],
+            "name": "actions"
+        }
+    },
+    "rates": {
+        "index": 9,
+        "type": "scopeRadios",
+        "label": "Rates",
+        "collection": {
+            "type": "jsonRadios",
+            "scope": [ "user", "staff", "client", "all" ],
+            "name": "actions"
+        }
+    },
+    "users": {
+        "index": 10,
+        "type": "scopeRadios",
+        "label": "Authentication",
+        "collection": {
+            "type": "jsonRadios",
+            "scope": [ "user", "staff", "client", "all" ],
+            "name": "actions"
+        }
+    },
+    "profiles": {
+        "index": 11,
+        "type": "scopeRadios",
+        "label": "Profiles",
+        "collection": {
+            "type": "jsonRadios",
+            "scope": [ "user", "staff", "client", "all" ],
+            "name": "actions"
+        }
+    },
+    "reports": {
+        "index": 12,
+        "type": "scopeRadios",
+        "label": "Reports",
+        "collection": {
+            "type": "jsonRadios",
+            "scope": [ "user", "staff", "client", "all" ],
+            "name": "actions"
+        }
+    },
+    "invoices": {
+        "index": 13,
+        "type": "scopeRadios",
+        "label": "Invoices",
+        "scope": [ "user", "staff", "client", "all" ],
+        "collection": {
+            "type": "jsonRadios",
+            "scope": [ "user", "staff", "client", "all" ],
+            "name": "actions"
+        }
+    }
+}

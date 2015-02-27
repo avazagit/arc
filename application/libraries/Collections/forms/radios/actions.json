@@ -1,0 +1,60 @@
+{
+    "scopes": {
+        "accessor": {
+            "staff": [ "user", "staff", "client" ],
+            "client": [ "user", "client" ],
+            "super": [ "user", "staff", "client", "all" ]
+        },
+        "user":{
+            "index": 1,
+            "label": "User "
+        },
+        "staff":{
+            "index": 2,
+            "label": "Staff "
+        },
+        "client":{
+            "index": 3,
+            "label": "Client "
+        },
+        "all":{
+            "index": 4,
+            "label": "All "
+        }
+    },
+    "none": {
+        "value": 0,
+        "label": "None",
+        "desc": "No access to records"
+    },
+    "lead": {
+        "value": 1,
+        "label": "Guided",
+        "desc": "Guided access to records only ( Clients )"
+    },
+    "view": {
+        "value": 2,
+        "label": "View",
+        "desc": "View existing records"
+    },
+    "make": {
+        "value": 3,
+        "label": "Create",
+        "desc": "Create new records ( Includes View )"
+    },
+    "edit": {
+        "value": 4,
+        "label": "Change",
+        "desc": "Edit existing records ( Includes Create )"
+    },
+    "wipe": {
+        "value": 5,
+        "label": "Delete",
+        "desc": "Delete existing records ( Includes Change )"
+    },
+    "full": {
+        "value": 6,
+        "label": "Destroy",
+        "desc": "Complete access, provides ability to completely destroy records ( Includes All )"
+    }
+}

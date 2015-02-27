@@ -20,12 +20,12 @@ function json_form_generate( $resource, $action, $input = [])
 function json_form_load( $resource, $action, $input )
 {
     $load = get_instance()->load->json( $resource . 'Form');
-    if( ! in_array( $action, $load[ 'options' ][ 'modes' ]))
+    if( ! in_array( $action, $load[ 'modes' ]))
         say( 'cannot load form ' . $resource . 'Form : BAD MODE - ' . $action );
 
     $fields = $load[ 'fields' ];
 
-    if( isset( $data[ $action ] )) $fields = array_merge( $fields, $data[ $action ]);
+    if( isset( $load[ $action ] )) $fields = array_merge( $fields, $load[ $action ]);
 
     if( ! empty( $input )) $fields = array_merge( $fields, $input );
 

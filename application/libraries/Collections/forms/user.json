@@ -6,57 +6,95 @@
         ],
         "fields": {
             "email": {
-                "markup": {
-                    "type": "text",
-                    "label": "Email"
-                }
+                "type": "text",
+                "label": "Email",
+                "placeholder": false,
+                "value": ""
             },
             "password": {
-                "markup": {
-                    "type": "password",
-                    "label": "Password"
-                }
+                "type": "password",
+                "label": "Password",
+                "placeholder": false,
+                "value": ""
             },
             "user_type": {
-                "markup": {
-                    "type": "jsonSelection",
-                    "label": "User Type",
-                    "collection": {
-                        "type": "childSelect",
-                        "name": "roles",
-                        "index": "types",
-                        "default": "default_permissions"
-                    },
-                    "selected": [
-                        {
-                            "type": "jsonGroup",
-                            "locate": "values",
-                            "label": "User Credentials",
-                            "collection": {
-                                "type": "input",
-                                "name": "roles",
-                                "fields": "credentials"
-                            }
+                "type": "groupSelector",
+                "label": "User Type",
+                "collection": {
+                    "type": "jsonSelect",
+                    "name": "roles"
+                },
+                "selected": {
+                    "staff": {
+                        "selected": [ "sg", "si", "sq", "sd", "sa" ],
+                        "ext": {
+                            "type": "text",
+                            "label": "Phone Extension"
                         },
-                        {
+                        "pin": {
+                            "type": "text",
+                            "label": "Phone PIN"
+                        },
+                        "permissions": {
                             "type": "jsonGroup",
-                            "label": "Resource Permissions",
-                            "collection": {
-                                "type": "radio",
-                                "name": "resources",
-                                "fields": "tables",
-                                "choices": "actions",
-                                "hide": true
+                            "label": "Staff User Permissions",
+                            "group": {
+                                "type": "scopeRadios",
+                                "name": "permissions",
+                                "fields": "staff"
                             }
                         }
-                    ]
+                    },
+                    "client": {
+                        "selected": [ "aa", "au" ],
+                        "manages": {
+                            "type": "groupSelector",
+                            "label": "Manages",
+                            "group": {
+                                "type": "list",
+                                "list": {
+                                    "no": "Standard User",
+                                    "ac": "Division",
+                                    "cc": "Agency",
+                                    "at": "Account"
+                                }
+                            },
+                            "selected":{
+                                "ac": {
+                                    "selected": [ "ac" ],
+                                    "type": "search",
+                                    "label": "Access Code",
+                                    "search": { "divisions": "access_code" }
+                                },
+                                "cc": {
+                                    "selected": [ "cc" ],
+                                    "type": "search",
+                                    "label": "Client ID",
+                                    "search": { "agencies": "client_id" }
+                                },
+                                "at": {
+                                    "selected": [ "at" ],
+                                    "type": "search",
+                                    "label": "Account Number",
+                                    "search": { "accounts": "account_number" }
+                                }
+                            }
+                        },
+                        "permissions": {
+                            "type": "jsonGroup",
+                            "label": "Client User Permissions",
+                            "group": {
+                                "type": "scopeRadios",
+                                "name": "permissions",
+                                "scope": "client"
+                            }
+                        }
+                    }
                 }
             },
             "invite_token": {
-                "markup": {
-                    "type": "token",
-                    "label": "invite_token"
-                }
+                "type": "token",
+                "label": "invite_token"
             }
         }
     }
